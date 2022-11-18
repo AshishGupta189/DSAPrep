@@ -1,0 +1,23 @@
+import java.util.*;
+
+
+class Main{
+    public static void main(String[] arga){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            int s=sc.nextInt();
+            int d=sc.nextInt();
+            int f=sc.nextInt();
+            int j=0;
+            if((s+d)>f) j++;
+            if((d+f)>s) j++;
+            if((f+s)>d) j++;
+            if(j==3){
+                System.out.println("Yes");
+            }else{
+                System.out.println("No");
+            }
+        }
+    }
+}
