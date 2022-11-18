@@ -1,0 +1,57 @@
+import java.util.*;
+
+
+class Main{
+    public static void main(String[] arga){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            int s=sc.nextInt();
+            Character[][] arr=new Character[s][s];
+            for(int j=0;j<s;j++){
+                String st=sc.next();
+                int a=0;
+                for(int k=0;k<s;k++){
+                    arr[j][k]=st.charAt(a);
+                    a++;
+                }
+            }
+            String ab=op(arr,s);
+            System.out.println(ab);
+        }
+    }
+    
+    public static String op(Character[][] arr,int s){
+        int a=0;
+        int aa=0;
+        int b=0;
+        int vv=0;
+        for(int i=0;i<s;i++){
+            for(int j=0;j<s;j++){
+                if(arr[i][j]==arr[s-i-1][j]){
+                    a++;
+                }
+                if(arr[j][i]==arr[j][s-i-1]){
+                    b++;
+                }
+            }
+        }
+        if(a==Math.pow(s,2)){
+            aa++;
+        }
+        if(b==Math.pow(s,2)){
+            vv++;
+        }
+        
+        if(aa>0&&vv>0){
+            return "BOTH";
+        }else if(aa>0&&vv<=0){
+            return "HORIZONTAL";
+        }else if(aa<=0&&vv>0){
+            return "VERTICAL";
+        }
+        return "NO";
+        
+    }
+}
+

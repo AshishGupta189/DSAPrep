@@ -1,0 +1,41 @@
+import java.util.*;
+
+
+class Main{
+    public static void main(String[] arga){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            int s=sc.nextInt();
+            arr[i]=s;
+        }
+        int o=res(n,arr);
+        if(o<0){
+            System.out.println(o);
+        }else{
+            System.out.println(o+1);
+        }
+    }
+    
+    public static int res(int n,int[] arr){
+        int num=-1;
+        int k=1;
+        int l=n-2;
+        int a=arr[0];
+        int b=arr[n-1];
+        while(k<l){
+            if(a>b){
+                b+=arr[l];
+                l--;
+            }else if(b>a){
+                a+=arr[k];
+                k++;
+            }
+            if(a==b){
+                num=k;
+            }
+        }
+        return num;
+    }
+}

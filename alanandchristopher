@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+class Main{
+    public static void main(String[] arga){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            String str=sc.next();
+            String res=op(str);
+            System.out.println(res);
+        }
+    }
+    public static String op(String str){
+        List<Character> chars=new ArrayList<>();
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)!='#'){
+                chars.add(str.charAt(i));
+            }else if(chars.size()>0){
+                chars.remove(chars.size()-1);
+            }
+        }
+        String oo="";
+        for(int i=0;i<chars.size();i++){
+            oo+=chars.get(i);
+        }
+        return oo;
+    }
+}

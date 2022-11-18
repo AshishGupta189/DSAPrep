@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        for(int j=0;j<t;j++){
+            int n=sc.nextInt();
+            int ta=sc.nextInt();
+            List<Integer> arr=new ArrayList<>();
+            for(int k=0;k<n;k++){
+                arr.add(sc.nextInt());
+            }
+            List<Integer> res=trav(arr,ta%n,n);
+            for(Integer i:res){
+             System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+    public static List<Integer> trav(List<Integer> arr,int n,int t){
+        int i=0;
+        while(i<n){
+            int a=arr.remove(t-1);
+            arr.add(0,a);
+            i++;
+        }
+        return arr;
+    }
+}

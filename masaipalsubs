@@ -1,0 +1,22 @@
+  public static void masaiPalindromicSubstring(String str){
+      int ans=0;
+    for(int i=0;i<str.length();i++){
+        String op="";
+        String ab="";
+        for(int j=i;j<str.length();j++){
+            op+=str.charAt(j);
+            int s=0;
+            for(int k=0;k<op.length();k++){
+                if(op.charAt(k)==op.charAt(op.length()-k-1)){
+                    s++;
+                }else{
+                    break;
+                }
+            }
+            if(s==op.length()&&ans<s){
+                ans=s;
+            }
+        }
+    }
+    System.out.println(ans);
+  }
