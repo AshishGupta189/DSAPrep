@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+class Main{
+    public static void main(String[] arga){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int t=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int[] max=op(arr,n,t);
+        for(int i=0;i<n;i++){
+            System.out.print(max[i]+" ");
+        }
+    }
+    public static int[] op(int[] arr,int n,int tar){
+        int j=n-1;
+        for(int i=tar;i<(n+tar)/2;i++){
+            int x=arr[j];
+            arr[j]=arr[i];
+            arr[i]=x;
+            j--;
+        }
+        return arr;
+        
+    }
+}

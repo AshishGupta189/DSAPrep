@@ -1,0 +1,10 @@
+function rotateBy90(R, matrix){
+    //write code here
+    for(let j=R-1;j>=0;j--){
+        let bag=""
+        for(let i=0;i<R;i++){
+            bag=bag+matrix[i][j]+" ";
+        }
+        console.log(bag)
+    }
+}
