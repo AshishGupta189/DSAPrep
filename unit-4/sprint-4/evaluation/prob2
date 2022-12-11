@@ -1,0 +1,111 @@
+Q2/- How many types of relationships exist among tables in the
+Database? Explain with some examples, and also mention how to
+establish these relationships among tables with examples.
+
+
+At table level we have three types of relationship:
+
+- one to one
+- one to many
+- many to many
+
+in one to one relationship we have only relation between the two.
+ex: a person can have on;y one dl and one dl can have only one person.
+if we want to establish otm we need to use foreign keyword and unique keywird also.
+
+create table person(
+    pid int pk,
+    pname varchar(10),
+    email varchar(210)
+)
+
+
+create table dl(
+
+    dlid int pk,
+    issue date,
+
+    pid int unique,
+
+    fk(pid) references person(pid)
+
+)
+
+
+
+one to many
+
+
+one to many means a person can use multiple assests but multiple assests can be used by that only person
+ex: person:mobile,car,bike,/father-child,school-student.
+we dont use unique keyword while establishing one to many relationship.
+
+create table person(
+    pid int pk,
+    pname varchar(10),
+    email varchar(210)
+)
+
+
+create table mobile(
+
+    dlid int pk,
+    issue date,
+
+    pid int,
+
+    fk(pid) references person(pid)
+
+)
+create table bike(
+
+    dlid int pk,
+    issue date,
+
+    pid int,
+
+    fk(pid) references person(pid)
+
+)
+
+create table car(
+
+    dlid int pk,
+    issue date,
+
+    pid int,
+
+    fk(pid) references person(pid)
+
+)
+
+
+
+
+
+
+many to many
+
+
+we can use many assests and many assests can be used by many perosons.
+ex:movie-actor,book-author,student course.
+
+create table student(
+    int id pk,
+    STring name,
+    String marks,
+)
+
+create table course(
+    int id pk,
+    String name,
+    int fee
+)
+
+create table link(
+    int cid,
+    int sid,
+    fk(cid) refrences student(id),
+    fk(sid) references course(id)
+)
+

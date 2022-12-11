@@ -1,0 +1,10 @@
+Q2/- Explain the Entity class life-cycle.
+
+The Entity Class Life Cycle is:
+1. New state /Transient state
+2. Persistence state
+3. Detached state
+
+1. Transient State: This state is basically known as creation state. In this state we create database connection n all
+2. Persitence State : This state is basically used for JPA to interact with ORM sw .
+3. Detached State: IN this state the operations are done with persistence object. ex:em.close();

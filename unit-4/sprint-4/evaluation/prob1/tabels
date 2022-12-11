@@ -1,0 +1,16 @@
+ create table Department(did int Primary key auto_increment,
+    -> dname varchar(12) not null,
+    -> location varchar(12) not null
+    -> );
+
+
+     create table Employee
+    -> (empid int primary key auto_increment,
+    -> ename varchar(12) not null,
+    -> address varchar(12),
+    -> email varchar(20) not null unique,
+    -> password varchar(12),
+    -> salary int,
+    -> deptid int,
+    -> Foreign key(deptid) references Department(did)
+    -> );

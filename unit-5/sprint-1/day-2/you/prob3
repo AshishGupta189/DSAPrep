@@ -1,0 +1,6 @@
+Q3/- What is the Difference between the Java Bean class and the POJO class.
+
+POJO can have fields other than private also while Bean can have only private fields.
+Bean class must implements serializable while it's not complimentry for POJO
+POJO may or maynot have a zero argument constructor while Bean must have zero argument constructor.
+every Bean is a POJO but every POJO is not Bean

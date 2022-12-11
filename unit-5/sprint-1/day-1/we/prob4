@@ -1,0 +1,6 @@
+Q4/- What are the different types of Maven repositories?
+
+There are three different types of maven repo:
+1. local repository(available locally)
+2. central repository(available on internet ,.java->.class)
+3. remote repository(which is not in central repo,on internet)

@@ -1,0 +1,95 @@
+1. Explain the difference between == operator and equals() method
+with a code example.
+=> == operator compares the address of the datatype while equals () method 
+compares the content provided but not the string.
+
+ex: String str="xyz";
+	  String str2="xyz";
+		sout(str==str2) //true, sout(str.equals(str2))//true
+		so here we are using a string literal and the value is the same so both String 
+will be assigned to the same address. and if we print(str==str2) it will give me 
+output as true but when we use new keyword new address is assigned
+
+String s1=new String("value");
+String s2=new String("value");
+sout(s1==s2)//false , sout(s1.equals(s2)) //true
+
+here addresses are different but the value is the same so the == operator gives false while
+equals ()method gives true;
+
+2. What do you understand by “Java Strings are immutable”.
+Explain the advantages and disadvantages of immutability of
+Strings
+=> Java Strings are immutable means they can be unchanged or constant we can't
+change its value what we can do is to reassign it to a new value without
+destroying the initial value.
+
+ex: String s1="new"; //here we have assigned an initial value to s1;
+String temp=s1; //we have given temp's value as s1's value.
+//now we are going to reassign the value to s1.
+s1=s1+s1;//new value of s1 becomes newnew but new value is also there.
+//even at this place the value of temp is same as new.
+
+sout(s1)//newnew
+sout(temp)//new
+
+so by this we can say that Java Strings are immutable.
+
+Advantages:	if someone from outside wants to change the information in our
+code such as password or something so due to immutability he or she can't do it
+which makes Java a very secure language.
+
+Disadvantage: Suppose we are travelling on an airline and we are keeping the
+data of latitude and longitude in our string so in a very short period of time
+the creation of string is very much so it will be very messy to get the data
+It's the disadvantage of immutability.
+
+
+7. Explain the concept of static in Java.
+=> Static generally refers to global such as global methods or variables,
+you can use these variables or methods ver simply by just typing it name.
+Static variables or methods are loaded before the code is executed while non
+static are loaded only when it is needed.
+static is related to class and variables. It takes less memory because it is 
+loaded in the memory only once while dynamic loading loads all the time needed.
+if we make any variable or method static in java so it'll be loaded in the 
+memory where it may or may not be executed.In Java our maun method is always 
+static and it's the only entry point to the code.
+Static in java plays a very important role without it our main methods is 
+incomplete and without main method we can't run our java programs.
+
+3. Explain has-A relationship with a code example.
+=> we have created a class in java named as Animal and we are exteding Animal
+class with Dog and inheriting the properties of Animals to Dog. so Dog will 
+get all the property of Animal along with his own properties.
+here we can say that 
+Dog has a relationship with Animal.
+
+ex:
+class Animal{
+void eat(){
+sout("I can eat");
+}
+int age=4;
+String category="Animal";
+int legs =4;
+}
+//this is an animal class
+
+class Dog extends Animal{//here all the properties of animal is inherited by 
+dog and we can also override the method or int by giving the same name
+
+int age=10;
+void eat(){
+sout("Dog can eat")
+} //it's always mandatory to use @override before overriding any method.
+}
+
+now i can access all the properties of dog's itself and animal one' too.
+so here Dog has-A relationship.
+
+
+
+
+
+

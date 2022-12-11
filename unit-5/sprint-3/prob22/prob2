@@ -1,0 +1,38 @@
+## Problem 2 : Explain the Following with an Example :
+
+- What do you mean by the IOC ? :
+- What is Dependency Injection ? :
+- Explain the life cycle of the Spring Bean ?
+
+
+IOC means Inversion of Control i.e whatever i require(object), I am delegating this to some constructor(spring), this is known as IOC
+ex: We need a house to be constructed, we are delegating it to labours for building house, this is Inversion of control.
+ex: We need some bean class dependency and we are delegating it to spring
+
+- Dependency Injection: whenever we want an intsance of other class in our class, Dependency Injection will build that dependency and you don't have to create the instance of that object all time you need.
+
+
+ex: class A{
+    int a;    
+}
+
+class B{
+    A a;
+    A(Obj a){
+        this.a=a;
+    }
+}
+
+Dependency Injection will inject this dependency and you don't need to create A class instance.
+
+
+
+
+Life Cycle of spring bean:
+
+Doesn't created -> Instanciated(Post Construct) -> Initialized -> Service -> (PreDestroy)Destroy
+
+Firstly bean item i not created and then it's created in 2nd step, then it is initialized after that it has done its service at last it's deleted/destroyed
+
+
+

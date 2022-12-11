@@ -1,0 +1,6 @@
+Q5/- Create a Jdbc application by using Maven to implement the following
+functionalities:
+public String registerEmployee(Employee employee)throws EmployeeException;
+public Employee getEmployeeById(int empId)throws EmployeeException
+
+

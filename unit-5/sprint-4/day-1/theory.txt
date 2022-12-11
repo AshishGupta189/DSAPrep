@@ -1,0 +1,35 @@
+Q1/- Explain the Java-based MVC architecture in Web application development.
+
+M model
+V view(JSP)
+C control(Servlet)
+
+
+Q2/- How Spring-MVC simplifies Java-based Web application development.
+
+we dont need to write any Servlet by our own instead of that Spring-MVC provides Dispatcher Servlet to us.
+and simplifies us by giving many mechanism.
+
+
+Q3/- What is the role of ServletContainer in web application development?
+
+ServletContainer's role in web application :
+
+ServletContainer contains Servlet(PL),Service layer(SL), Data Access Layer(BLL).
+
+Q4/- Write a small note on Servlet and JSP
+
+Servlet is a java class where we can write HTML code while JSP is a HTML file inside which we can write Java code.
+
+Q5/ What do you mean by Webservices, Explain the similarities and differences between a
+Web application and Webservices.
+
+
+Web Services is a type of Web application that can generate dynamic result as raw data.
+this raw data can be used inside any other web application independent of technology.
+
+Indigo -> web application(HTML) (End user)
+       -> web server(any other web application)
+
+Yatra ->Web application using Indigo raw data.
+

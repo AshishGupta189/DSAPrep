@@ -1,0 +1,83 @@
+create table DEPOSIT(ACTNO varchar(25),CNAME varchar(20),BNAME varchar(20),AMOUNT int,ADATE date);
+
+create table BRANCH(BNAME varchar(20),CITY varchar(20));
+
+create table CUSTOMER(CNAME varchar(20),CITY varchar(20));
+
+create table BORROW(LOANNO varchar(5),CNAME varchar(20),BNAME varchar(20),AMOUNT int);
+
+DESC deposit; desc branch; desc customer;
+desc borrow;
+
+insert into deposit values(100,'ANIL','VRCE',1000,"1995-03-01");
+insert into deposit values(101,'Sunil','mgroad',5000,'1996-01-04');
+insert into deposit values(102,'Rahul','karolbagh',3500,'1995-10-17');
+insert into deposit values(103,'Madhuri','chandni',1200,'1995-12-17');
+insert into deposit values(104,'pramod','mgroad',3000,'1996-03-27');
+insert into deposit values(105,'sandip','karolbagh',2000,'1996-03-31');
+
+
+insert into branch values('vrce','nagpur');
+insert into branch values('karolbagh','delhi');
+insert into branch values('chandni','delhi');
+insert into branch values('mgroad','banglore');
+
+
+insert into customer values('Anil','calcuta');
+insert into customer values('rahul','baroda');
+insert into customer values('madhuri','nagpur');
+insert into customer values('pramod','nagpur');
+insert into customer values('sunil','delhi');
+
+
+insert into borrow values(201,'anil','vrce',1000);
+insert into borrow values(206,'rahul','karolbagh',5000);
+insert into borrow values(311,'sunil','mgroad',3000);
+insert into borrow values(321,'madhuri','chandni',2000);
+insert into borrow values(375,'pramod','mgroad',8000);
+
+
+select * from borrow where amount between 2000 AND 3000;
+SELECT * FROM DEPOSIT;
+SELECT CNAME,ACTNO FROM DEPOSIT;
+SELECT CNAME FROM CUSTOMER WHERE CITY='NAGPUR';
+SELECT * FROM DEPOSIT WHERE ADATE>'1995-11-17';
+SELECT ACTNO,AMOUNT FROM DEPOSIT WHERE ADATE BETWEEN '1996-12-1' AND '1996-06-01';
+SELECT * FROM DEPOSIT WHERE CNAME LIKE 'C%';
+SELECT * FROM BORROW WHERE CNAME LIKE '_u%';
+SELECT * FROM DEPOSIT WHERE BNAME='CHANDNI' OR BNAME='MGROAD';
+SELECT * FROM DEPOSIT WHERE BNAME!='CHANDNI' AND BNAME<>'MGROAD';
+SELECT * FROM DEPOSIT WHERE AMOUNT>1000 ORDER BY CNAME;
+SELECT * FROM DEPOSIT WHERE AMOUNT>1000 ORDER BY CNAME DESC;
+SELECT * FROM CUSTOMER WHERE CNAME LIKE '__A%' OR '__D%';
+SELECT * FROM BORROW WHERE AMOUNT>8000 OR AMOUNT<2000;
+SELECT DISTINCT * FROM DEPOSIT;
+UPDATE DEPOSIT SET AMOUNT=AMOUNT+AMOUNT*0.1 WHERE BNAME='VRCE';
+UPDATE DEPOSIT SET AMOUNT=AMOUNT+AMOUNT*0.1 WHERE BNAME='VRCE' AND CNAME='ANIL';
+
+
+
+               basic sql-2
+
+create table student(name varchar(20),rollno int,branch varchar(20),city varchar(20));
+
+insert into student values('vijaya',150,'cse','chennai');
+insert into student values('sita',202,'etc','kolkata');
+insert into student values('ravi',300,'eee','delhi');
+insert into student values('basu',165,'etc','chennai');
+select count(*) from student;
+select count(*) from student where branch like 'e%';
+alter table student add marks int;
+alter table student modify name varchar(25);
+delete from student where branch='etc';
+rename table student to studinformation;
+truncate table studinformation;
+drop table studinformation;
+
+
+
+
+
+
+
+

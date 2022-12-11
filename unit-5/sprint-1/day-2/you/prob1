@@ -1,0 +1,8 @@
+Q1/- Limitation of JDBC-based persistence logic over the ORM
+
+1. JDBC can't store Java Object generally.
+2. JDBC code is database dependent.
+3. Lots of boiler plate code.
+4. Lots of exceptions need to be handled at compile time itself.
+5. Itdoesn't provide any caching mechanism.
+

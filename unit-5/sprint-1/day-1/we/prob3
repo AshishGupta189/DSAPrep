@@ -1,0 +1,13 @@
+Q3/- What are the different phases of the Maven life cycle?
+
+DIfferent phases of maven life cycle are:
+
+validate
+compile
+test-compile
+test
+package
+install
+deploy
+clean
+

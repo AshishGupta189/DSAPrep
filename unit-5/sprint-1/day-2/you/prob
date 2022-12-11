@@ -1,0 +1,9 @@
+Q4/-Explain about the ORM, what are the benefits of the ORM approach over the
+JDBC approach
+
+ORM stands for Object Relational mapping and it is used for mapping Java Object to db server.
+1. It can store Java object generally.
+2. Not needed to write boiler plate code again and again.
+3. Need not to download dependencies again and again.
+4. Exception handling is optional.
+5. It provides caching mechanism.

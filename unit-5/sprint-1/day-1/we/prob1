@@ -1,0 +1,6 @@
+Q1/ Explain the Build process of the Java Application, How the Maven helps in the
+application build?
+
+when we try to use any java applications we need to download various jar files (dependencies) and we need to use this process as much as project we are creating. In any large scale company there are hundreds of thoisands of jars we need to load so doing this thing again and again is not efficient as a developer. There Maven comes in picture:
+It helps us to not downloading the jar again and again just we can use it by the repositories present in maven such as Local,Central or remote repositories. Maven builds dependencies very easily, we need to writ 1 2 lines of code for bulding dependency.
+This is how maven helps in application building.

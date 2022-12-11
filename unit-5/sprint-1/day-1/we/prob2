@@ -1,0 +1,4 @@
+Q2/- What is the POM, Explain the basic properties of the pom.xml file in Maven based
+application.
+
+POM is project object model and the basic properties of pom.xml file in maven based application is it can build as many dependencis as required and this file is also helpful in packaging the file. Maven firstly reads the pom.xml file, then executes its goal. 

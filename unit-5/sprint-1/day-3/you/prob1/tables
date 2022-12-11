@@ -1,0 +1,36 @@
+-- mysql> create database assignment;
+-- Query OK, 1 row affected (0.02 sec)
+
+-- mysql> use assignment;
+-- Database changed
+-- mysql> show tables;
+-- Empty set (0.00 sec)
+
+-- mysql> create table product(productId int primary key,productName varchar(20),quantity int,price int);
+-- Query OK, 0 rows affected (0.03 sec)
+
+-- mysql> desc product;
+-- +-------------+-------------+------+-----+---------+-------+
+-- | Field       | Type        | Null | Key | Default | Extra |
+-- +-------------+-------------+------+-----+---------+-------+
+-- | productId   | int         | NO   | PRI | NULL    |       |
+-- | productName | varchar(20) | YES  |     | NULL    |       |
+-- | quantity    | int         | YES  |     | NULL    |       |
+-- | price       | int         | YES  |     | NULL    |       |
+-- +-------------+-------------+------+-----+---------+-------+
+-- 4 rows in set (0.01 sec)
+
+-- mysql> insert into product values(1,"Nike",1,3500);
+-- Query OK, 1 row affected (0.01 sec)
+
+-- mysql> insert into product values(2,"adidas",1,3200);
+-- Query OK, 1 row affected (0.00 sec)
+
+-- mysql> insert into product values(3,"puma",2,5900);
+-- Query OK, 1 row affected (0.00 sec)
+
+-- mysql> insert into product values(4,"puma",1,5500);
+-- Query OK, 1 row affected (0.00 sec)
+
+-- mysql> insert into product values(5,"adidas",4,10800);
+-- Query OK, 1 row affected (0.00 sec)

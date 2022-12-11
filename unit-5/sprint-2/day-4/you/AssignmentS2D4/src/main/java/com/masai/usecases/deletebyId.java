@@ -1,0 +1,24 @@
+package com.masai.usecases;
+
+import com.masai.Dao.DAO;
+import com.masai.Dao.DaoImpl;
+import com.masai.Exception.MyException;
+import com.masai.model.User;
+
+import java.util.Scanner;
+
+public class deletebyId {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter id");
+        int c=sc.nextInt();
+
+        DAO d=new DaoImpl();
+        try {
+            String msf=d.deleteUser(c);
+            System.out.println(msf);
+        } catch (MyException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

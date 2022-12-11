@@ -1,0 +1,32 @@
+1.  Write down some of the HTTP request, and response headers.
+
+
+HTTP requests are messages sent by the client to initiate an action on the server. Their start-line contain three elements: An HTTP method, a verb (like GET , PUT or POST ) or a noun (like HEAD or OPTIONS ), that describes the action to be performed.
+
+https://www.gmail.com
+
+https://ipaddress:port/gmailapp/index.html
+
+some of the http request headers are :
+
+1. Date : date and time on which request is made from the client.
+2. Host: ipaddress of the client.
+3. user-agent: from which browser the client has generated the request.
+4. content-type: type of the data coming from the request body (json, txt, xml, pdf, jpg)
+5. connection : live or lost
+6. cookies: name-value pair text
+
+2. Write down some of the frequently used HTTP Status codes and their meanings
+100 -- 199  : information 
+200 -- 299 : success or OK
+300--399 : redirection
+400 -499 : incomplete resource / bad request  401: Bad request, 403: forbidden 
+500-599 : server-error
+
+3. - What is the difference between SOAP and REST ?
+
+SOAP stands for Simple Access Object Protocol while REST means Representational State Transfer API 
+SOAP is heavywieght than REST
+SOAP is platform independent while REST is not.
+
+

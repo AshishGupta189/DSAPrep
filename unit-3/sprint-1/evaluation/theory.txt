@@ -1,0 +1,98 @@
+1. Explain the four pillars of object-oriented programming.
+--> The four pillars of object-oriented programming are:-
+a). Inheritance
+b). Encapsulation
+c). Abstraction 
+d). Polymorphism
+
+Inheritance:- The process in which we inherit the property of our parent 
+is known as Inheritance. In a programming language, we inherit the property of 
+classes, functions, etc. For inheriting properties we need to use this and new 
+keyword.
+ex: function constructor(n){
+					this.name=n;
+					this.class="JA111";
+			}
+
+		var myobj=new constructor("Akash");
+
+Encapsulation:- In this process, we put our variables and methods inside  
+a capsule which is generally classes in java.
+and also when we want any data not to be accessed outside we encapsulate that 
+data with the "#" symbol.
+
+Abstraction:- Hiding the unnecessary implementation part and just showing the 
+final output is known as Abstraction.
+when we code we have very complex codes which we don't want to show. Hiding 
+this complex is known as Abstraction
+
+Polymorphism:- Poly means many and morphism means form so polymorphism means
+many forms. Such as carbon we have many forms of carbon as Diamond, Graphite,
+Coal, etc.
+
+Another example of polymorphism is-
+when we ask animals to say they all say in different voices o languages, all
+of them are doing the same work with a different approach. This thing is known 
+as Polymorphism.
+
+
+2. Differentiate between JRE, JVM, and JDK.
+
+--> JRE stands for Java runtime environment. The environment needed for running
+the code in Java is known as JRE.
+we can say JRE as a combination of JVM and library classes in Java.
+JRE=JVM+library classes.
+--> JVM stands for Java virtual machine as the name says its a virtual machine 
+that executes our code in Java.
+--> JDK stands for Java Development Kit and this kit is a combination of
+JRE+development tools.
+
+Java executesthe code in this pattern:-
+
+src code --> compiler -->bytecode --> JVM -->windows/linux/Mac OS
+
+ 
+
+ package evaluation_5sep;
+
+public class _5sep_eval {
+
+    public static void main(String [] args){
+
+        int day=8;
+        switch(day){
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+            default:
+                System.out.println("Invalid Input");
+        }
+        int x=1;
+        do{
+            x++;
+            if(x%2==0){
+                System.out.println(x);
+                x++;
+            }else{
+                continue;
+            }
+        }while(x<=20);
+    }
+}

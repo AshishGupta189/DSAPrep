@@ -1,0 +1,5 @@
+Q2/- Differentiate between Hibernate and JPA
+
+JPA is Java Persistence API while Hibernate is an ORM software.
+JPA is used for Oject -> ORM mapping while Hibernate is used for ORM -> DB mapping.
+JPA can work with any kind of ORM software.
