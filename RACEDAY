@@ -10,6 +10,7 @@ class Main{
             int b=sc.nextInt();
             int c=sc.nextInt();
             int d=sc.nextInt();
+            //callinf func op
             int s=op(a,b,c,d);
             System.out.println(s);
         }
