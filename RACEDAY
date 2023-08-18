@@ -15,6 +15,7 @@ class Main{
             System.out.println(s);
         }
     }
+    //returning the sum from op method
     public static int op(int a,int b,int c,int d){
         int sum=0;
         if(b>a) sum+=1;
