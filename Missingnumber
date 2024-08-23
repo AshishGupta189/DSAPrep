@@ -1,0 +1,13 @@
+public class missingnumber{
+    public static void main(String[] args){
+        int[] arr={1,5,2,3,6,4,8,10,9};
+        int sum=0;
+        for(int i:arr){
+            sum+=i;
+        }
+
+        int add=((arr.length+1)*(arr.length+2)/2);
+        System.out.println(add-sum);
+
+    }
+}
