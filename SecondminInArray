@@ -1,0 +1,16 @@
+class secMin{
+    public static void main(String ... args){
+        int[] arr={5 ,9,6,30,22,54,89,65,47,20,33,28};
+        int min=10000;
+        int sec=10000;
+        for(int i=0;i<arr.length;i++){
+            if(min>arr[i]){
+                sec=min;
+                min=arr[i];
+            }else if(sec>arr[i]&&arr[i]!=min){
+                sec=arr[i];
+            }
+        }
+        System.out.println(sec);
+    }
+}
