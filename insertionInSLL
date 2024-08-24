@@ -1,0 +1,18 @@
+static ListNode insertAtStart(ListNode ln){
+            ListNode currNode=head;
+            head=ln;
+            head.next=currNode;
+
+            return head;
+}
+static ListNode insertAtEnd(ListNode ln){
+            ListNode curr=head;
+            while(curr.next!=null){
+                curr=curr.next;
+                
+            }
+            curr.next=ln;
+            
+            
+            return head;
+}
