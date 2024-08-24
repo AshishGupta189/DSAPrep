@@ -1,0 +1,28 @@
+
+
+class createlinkedlist{
+
+    private static ListNode head;
+
+    private static class ListNode{
+        private int data;
+        private ListNode next;
+
+        private ListNode(int n){
+            this.data=n;
+            this.next=null;
+        }
+    }
+    public static void main(String ... args){
+        head=new ListNode(10);
+        ListNode sec=new ListNode(5);
+        head.next=sec;
+        
+        ListNode currNode=head;
+        while(currNode!=null){
+            System.out.print(currNode.data+"-->");
+            currNode=currNode.next;
+        }
+        System.out.println("null");
+    }
+}
