@@ -16,3 +16,30 @@ static ListNode insertAtEnd(ListNode ln){
             
             return head;
 }
+
+static ListNode insertAtpos(ListNode ln,int pos){
+            if(pos<1||pos>findlen()+1){
+                System.out.println("Provide a valid index");
+            }
+            if(pos==1){
+               return insertAtStart(ln);
+            }
+            if(pos==findlen()+1){
+                return insertAtEnd(ln);
+            }
+            int c=1;
+            ListNode cur= head;
+            while(c!=pos&&cur!=null){
+                c++;
+                if(c==pos&&cur!=null){
+                    ln.next=cur.next;
+                    //cur.data=ln.data;
+                    cur.next=ln;
+                    break;
+                }
+                
+                cur=cur.next;
+                
+            }
+            return head;
+}
