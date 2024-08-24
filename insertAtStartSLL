@@ -1,0 +1,7 @@
+static ListNode insertAtStart(ListNode ln){
+            ListNode currNode=head;
+            head=ln;
+            head.next=currNode;
+
+            return head;
+        }
