@@ -1,5 +1,3 @@
-
-
 class createlinkedlist{
 
     private static ListNode head;
@@ -24,5 +22,17 @@ class createlinkedlist{
             currNode=currNode.next;
         }
         System.out.println("null");
+        System.out.println(findlen());
+    }
+
+    private static int findlen(){
+        ListNode cu=head;
+        int count=0;
+        while(cu!=null){
+            count++;
+            cu=cu.next;
+        }
+
+        return count;
     }
 }
