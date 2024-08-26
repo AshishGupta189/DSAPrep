@@ -1,3 +1,4 @@
+//insertion at start of a linkedlist
 static ListNode insertAtStart(ListNode ln){
             ListNode currNode=head;
             head=ln;
