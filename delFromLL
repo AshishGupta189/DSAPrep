@@ -16,3 +16,21 @@ static ListNode deleNodeFromLast(ListNode ln){
 
             return ll;
         }
+
+static ListNode deleNodeFromPos(ListNode ln,int pos){
+            int c=1;
+            if(pos==findlen()){
+                return deleNodeFromLast(ln);
+            }
+            ListNode ll=ln;
+            while(c<pos&&ll!=null){
+                c++;
+                ll=ll.next;
+            }
+
+            ll.data=ll.next.data;
+            ll.next=ll.next.next;
+            
+
+            return ll;
+        }
