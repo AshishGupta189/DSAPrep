@@ -5,3 +5,14 @@ static ListNode deleNodeAtStart(ListNode ln){
 
             return head;
         }
+
+static ListNode deleNodeFromLast(ListNode ln){
+
+            ListNode ll=ln;
+            while(ll.next.next!=null){
+                ll=ll.next;
+            }
+            ll.next=null;
+
+            return ll;
+        }
